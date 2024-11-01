@@ -29,6 +29,26 @@ This project configures a Bastion EC2 instance and VPC for both `dev` and `prod`
 └── terragrunt.hcl
 ```
 
+## Prerequisites
+To run this terragrunt script, you'll need the following:
+
+- [Terraform](https://developer.hashicorp.com/terraform/install) installed (version 0.12+)
+- AWS account and [AWS CLI](https://aws.amazon.com/cli/) configured
+- An IAM user with `AdministratorAccess` permissions
+- An AWS key pair for EC2 access
+
+## Resources Created
+
+This terragrunt script will create the following resources:
+
+- A VPC with specified CIDR block
+- Public and private subnets
+- An internet gateway attached to the public subnet
+- A NAT gateway for private subnet routing
+- Security groups to allow SSH access to the bastion server
+- An EC2 instance configured as a bastion server
+- Route tables for the public and private subnets
+
 ## Features
 - **Environment-Specific Configurations**: Separate `terragrunt.hcl` files for `dev` and `prod` environments to manage distinct configurations.
 - **Reusable Terraform Modules**: Modularized Terraform code for `ec2` and `vpc` to promote reusability across environments.
