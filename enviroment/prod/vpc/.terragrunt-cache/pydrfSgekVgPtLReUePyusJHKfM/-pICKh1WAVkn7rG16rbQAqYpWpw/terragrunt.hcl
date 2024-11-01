@@ -7,7 +7,7 @@ include "root" {
 }
 
 inputs = {
-  enviroment                          = "prod"
+  enviroment                          = "dev"
   instance_region                     = "us-east-1"
   security_group_ingress_cidr_block   = "0.0.0.0/0"
   cidr_block                          = "11.0.0.0/16"

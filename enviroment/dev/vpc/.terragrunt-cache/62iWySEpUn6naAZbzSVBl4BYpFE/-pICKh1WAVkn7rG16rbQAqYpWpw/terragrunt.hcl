@@ -7,10 +7,10 @@ include "root" {
 }
 
 inputs = {
-  enviroment                          = "prod"
+  enviroment                          = "dev"
   instance_region                     = "us-east-1"
   security_group_ingress_cidr_block   = "0.0.0.0/0"
-  cidr_block                          = "11.0.0.0/16"
-  subnet_a_cidr                       = "11.0.0.0/24"
-  subnet_b_cidr                       = "11.0.1.0/24"
+  cidr_block                          = "10.0.0.0/16"
+  subnet_a_cidr                       = "10.0.0.0/24"
+  subnet_b_cidr                       = "10.0.1.0/24"
 }
